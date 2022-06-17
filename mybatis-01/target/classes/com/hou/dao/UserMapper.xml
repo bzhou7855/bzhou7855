@@ -2,10 +2,10 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!--namespaceç»‘å®šä¸€ä¸ªå¯¹åº”çš„mapperæŽ¥å£-->
+<!--namespace°ó¶¨Ò»¸ö¶ÔÓ¦µÄmapper½Ó¿Ú-->
 <mapper namespace="com.hou.dao.UserMapper">
 
-    <!--idæ–¹æ³•å-->
+    <!--id·½·¨Ãû-->
     <select id="getUserList" resultType="com.hou.pogo.User">
         select * from USER
     </select>
@@ -15,7 +15,7 @@
         select * from USER where id = #{id}
     </select>
 
-    <!--å¯¹è±¡ä¸­çš„å±žæ€§å¯ä»¥ç›´æŽ¥å–å‡ºæ¥-->
+    <!--¶ÔÏóÖÐµÄÊôÐÔ¿ÉÒÔÖ±½ÓÈ¡³öÀ´-->
     <insert id="addUser" parameterType="com.hou.pogo.User">
         insert into USER (id, name, pwd) values (#{id}, #{name}, #{pwd});
     </insert>

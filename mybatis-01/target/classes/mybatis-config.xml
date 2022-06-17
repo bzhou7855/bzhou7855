@@ -17,7 +17,7 @@
         </environment>
     </environments>
 
-    <!--æ¯ä¸€ä¸ªmapper.xmléƒ½éœ€è¦æ³¨å†Œ-->
+    <!--Ã¿Ò»¸ömapper.xml¶¼ÐèÒª×¢²á-->
     <mappers>
         <mapper resource="com/hou/dao/UserMapper.xml"/>
     </mappers>
