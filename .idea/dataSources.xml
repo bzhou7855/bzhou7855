@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="intranet@szqaweb60.globalsources.com" uuid="3630dabd-a51a-47c3-959a-9d2c97812dd6">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://szqaweb60.globalsources.com:3306/intranet</jdbc-url>
+    </data-source>
+  </component>
+</project>

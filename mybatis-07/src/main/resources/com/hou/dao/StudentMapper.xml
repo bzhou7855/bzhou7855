@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hou.dao.StudentMapper">
+
+    <select id="getStudent" resultMap="StudentTeacher">
+        select s.id sid,s.name sname,t.id tid, t.name tname from student s,teacher t where t.id=s.tid
+    </select>
+    <resultMap id="StudentTeacher" type="Student">
+        <result column="sid" property="id"/>
+        <result column="sname" property="name"/>
+        <result column="tid" property="tid"/>
+        <result column="tid" property="teacher.id"/>
+        <result column="tname" property="teacher.name"/>
+
+    </resultMap>
+
+    <select id="getTeacher" resultType="teacher">
+        select * from teacher where id=#{id}
+    </select>
+
+    <select id="getStudentById" parameterType="int" resultMap="studentTeacher2Map">
+         select s.id sid,s.name sname,t.id tid,t.name tname from student s left join teacher t on s.tid=t.id where s.id=#{id}.
+    </select>
+    <resultMap id="studentTeacher1Map" type="Student">
+        <id column="sid" property="id"/>
+        <result column="sname" property="name"/>
+        <association property="teacher" javaType="Teacher">
+            <result column="tid" property="id"/>
+            <result column="tname" property="name"/>
+        </association>
+    </resultMap>
+
+    <resultMap id="studentTeacher2Map" type="Student">
+        <id column="sid" property="id"/>
+        <result column="sname" property="name"/>
+
+            <result column="tid" property="teacher.id"/>
+            <result column="tname" property="teacher.name"/>
+    </resultMap>
+
+
+    <select id="getStudentById1" parameterType="int" resultMap="studentTeacher3Map">
+         select s.id,s.name,s.tid stid from student s  where s.id=#{id}.
+    </select>
+    <resultMap id="studentTeacher3Map" type="Student">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="stid" property="tid"/>
+
+    </resultMap>
+
+</mapper>
