@@ -15,6 +15,14 @@ public interface BlogMapper {
 
     void updateBlog(Map map);
 
+    /*
+        * @param map
+        * @return java.util.List<com.hou.pojo.Blog>
+        * @author bobzhou
+        * @date 2022/6/17 16:18
+    */
     List<Blog> queryBlogForeach(Map map);
+    
+    
 
 }
