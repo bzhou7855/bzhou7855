@@ -20,6 +20,8 @@ public class MyTest {
         System.out.println(user1);
         System.out.println(user==user1);
         sqlSession1.close();
+        
+        //this is a test
     }
 
 
