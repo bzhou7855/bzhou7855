@@ -10,7 +10,7 @@ public interface UserMapper {
 
     List<User> getUserLike(String value);
 
-    //查询全部用户
+    //查询全部用户00000000
     List<User> getUserList();
 
     //根据id查询用户
