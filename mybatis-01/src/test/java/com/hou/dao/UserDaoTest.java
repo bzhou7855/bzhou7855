@@ -15,7 +15,7 @@ public class UserDaoTest {
     public void test(){
         // 获得sqlsession对象
         SqlSession sqlSession = MybatisUtils.getSqlSession();
-
+/////////
         try{
             // 1.执行 getmapper
             UserMapper userDao = sqlSession.getMapper(UserMapper.class);
@@ -145,6 +145,9 @@ public class UserDaoTest {
         list.forEach(u->System.out.println(u.getName()));
 
         sqlSession.close();
+
+        String json = "{\"name\": \"wanghang\",\"age\": 12,\"country\": \"china\"}\n";
+
     }
 
 
