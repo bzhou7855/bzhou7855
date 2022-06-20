@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface UserMapper {
-//get
+    //get1111111111
     List<User> getUserLike(String value);
 
     //查询全部用户00000000
